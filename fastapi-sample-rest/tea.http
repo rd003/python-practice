@@ -1,0 +1,26 @@
+@base_address = http://localhost:8000/teas
+
+GET {{base_address}}
+
+###
+POST  {{base_address}}
+Content-Type: application/json
+
+{
+    "id": 3,
+    "name":"Bagh bakri chai",
+    "origin":"India"
+}
+
+###
+PUT  {{base_address}}/3
+Content-Type: application/json
+
+{
+    "id": 3,
+    "name":"Wagh bakri chai",
+    "origin":"India"
+}
+
+###
+DELETE  {{base_address}}/3
