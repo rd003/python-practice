@@ -1,0 +1,30 @@
+@base_url = http://localhost:5000/api 
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc2MDQyNTY1NSwianRpIjoiMmQyOGQ5NjUtYmViMi00YzEzLWIwYzktNWE0YjYzY2RhOTBmIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6InJkMDAzIiwibmJmIjoxNzYwNDI1NjU1LCJjc3JmIjoiZmFhOTA1NTQtZTRjOS00ZWI3LTgxMjItMjRiNDBlMTJmYWRiIiwiZXhwIjoxNzYwNDMyODU1LCJyb2xlIjoiYWRtaW4ifQ.2RjlVs0fG3JGxY0VPDGQg8jTmQUuR2luZmPw-d35QXw
+
+@refresh_token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc2MDQyNTY1NSwianRpIjoiMzBjNjMwY2ItNzJkOC00NjI0LWEzZTUtMjRlYTdiMTQ1NWM1IiwidHlwZSI6InJlZnJlc2giLCJzdWIiOiJyZDAwMyIsIm5iZiI6MTc2MDQyNTY1NSwiY3NyZiI6IjM4YmIyZDQ1LTVmMTktNGQ3Yi05ODJkLTlmNjU2MzViZDUzMyIsImV4cCI6MTc3MzM4NTY1NSwicm9sZSI6ImFkbWluIn0.j6P_f2Xo8vyf91UZAb7t_Pn_eDelIqzZY7OjFszjozk
+
+GET {{base_url}}/all
+
+###
+GET {{base_url}}/greet
+Authorization: Bearer {{token}}
+
+###
+GET {{base_url}}/admin
+Authorization: Bearer {{token}}
+
+### Login
+POST {{base_url}}/login
+Content-Type: application/json
+
+{
+    "username":"rd003",
+    "password":"123"
+}
+
+### refresh
+POST {{base_url}}/refresh
+Authorization: Bearer {{refresh_token}}
+
+### Login
+POST {{base_url}}/logout

@@ -3,5 +3,5 @@
 ## packages 
 
 ```sh
-pip install Flask PyJWT
+pip install Flask Flask-JWT-Extended
 ```
